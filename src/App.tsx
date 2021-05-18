@@ -11,8 +11,12 @@ function App() {
     useEffect(() => {
 
         const fetchData = async () => {
-            const result = await axios('https://lendis-backend.herokuapp.com/api/v1/commits');
-            setData(result.data);
+            axios('https://lendis-backend.herokuapp.com/api/v1/commits').then(res => {
+                setData(res.data);
+            }).catch(err => {
+
+            })
+
         };
         fetchData();
     }, []);

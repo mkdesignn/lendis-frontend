@@ -5,7 +5,7 @@ import {Table} from 'react-bootstrap'
 
 const CommitsTable = (props) => {
 
-    const rows = props.data.map((row, key) =>{
+    const rows = props.data?.map((row, key) =>{
             return( <tr key={key}>
                     <td>{row.hash_id}</td>
                     <td>{row.comment}</td>
